@@ -15,6 +15,7 @@ class BinarySearchTree:
 
   def breadth_first_for_each(self, cb):
     pass
+    cache =[self]
 
   def insert(self, value):
     new_tree = BinarySearchTree(value)
