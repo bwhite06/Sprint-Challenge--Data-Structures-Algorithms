@@ -16,7 +16,13 @@ class BinarySearchTree:
   def breadth_first_for_each(self, cb):
     pass
     cache =[self]
-
+    while len(cache) > 0:
+      nodeloc = cache.pop(0)
+      cb(nodeloc.value)
+      if nodeloc.left != None:
+         cache.append(nodeloc.left)
+      if nodeloc.right != None:
+         cache.append(nodeloc.right)
   def insert(self, value):
     new_tree = BinarySearchTree(value)
     if (value < self.value):
